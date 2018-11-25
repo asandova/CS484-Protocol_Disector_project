@@ -1,0 +1,24 @@
+{
+    "ProtocolName" : "ProtoName",
+    "Port":"#1234",
+    "Description": "Description of protocol goes here",
+    "TCP/UDP":"TCP",
+    "Fields" : {
+        "Message Length" : {
+            "Size" : "#1234",
+            "Offest" : "#1234"
+        },
+        "RequestID" : {    
+            "Size" : "#1234",
+            "Offset" : "#1234"
+        },
+        "ResponceID" :{
+            "Size" : "#1234",
+            "Offset" : "#1234"
+        },
+        "OPCode" : { 
+            "Size" : "#1234",
+            "Offset" : "#1234"
+        }
+    }
+}
