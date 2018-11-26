@@ -1,0 +1,48 @@
+{
+    "ProtocolName" : "RTP",
+    "Port":"5004",
+    "Description": "RTP provides end-to-end network transport functions suitable for applications transmitting real-time data, such as audio, video or simulation data, over multicast or unicast network services. RTP does not address resource reservation and does not guarantee quality-of-service for real-time services.",
+    "TCP/UDP":"UDP",
+    "Fields" : {
+        "Version" : {
+            "Size" : "#1234",
+            "Offest" : "#1234"
+        },
+        "Padding" : {
+            "Size" : "#1234",
+            "Offest" : "#1234"
+        },
+        "Extension" : {
+            "Size" : "#1234",
+            "Offest" : "#1234"
+        },
+        "CSRC Count" : {
+            "Size" : "#1234",
+            "Offest" : "#1234"
+        },
+        "Maker" : {
+            "Size" : "#1234",
+            "Offest" : "#1234"
+        },
+        "Payload Type" : {
+            "Size" : "#1234",
+            "Offest" : "#1234"
+        },
+        "Sequence Number" : {
+            "Size" : "2",
+            "Offest" : ""
+        },
+        "Time Stamp" : {
+            "Size" : "4",
+            "Offest" : "4"
+        },
+        "Synchronization Source" : {
+            "Size" : "4",
+            "Offest" : "8"
+        },
+        "Contribution Source" : {
+            "Size" : "4",
+            "Offest" : "16"
+        }
+    }
+}

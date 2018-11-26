@@ -4,19 +4,19 @@
     "Description": "Description of protocol goes here",
     "TCP/UDP":"TCP",
     "Fields" : {
-        "Message Length" : {
-            "Size" : "#1234",
-            "Offest" : "#1234"
-        },
-        "RequestID" : {    
+        "Field 1" : {
             "Size" : "#1234",
             "Offset" : "#1234"
         },
-        "ResponceID" :{
+        "Field 2" : {    
             "Size" : "#1234",
             "Offset" : "#1234"
         },
-        "OPCode" : { 
+        "Field 3" :{
+            "Size" : "#1234",
+            "Offset" : "#1234"
+        },
+        "Fields 4" : { 
             "Size" : "#1234",
             "Offset" : "#1234"
         }

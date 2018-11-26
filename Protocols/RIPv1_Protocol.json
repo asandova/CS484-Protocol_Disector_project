@@ -1,0 +1,28 @@
+{
+    "ProtocolName" : "RIP",
+    "Port":"520",
+    "Description": "This is a simple distance vector protocol. It has been enhanced with various techniques, including Split Horizon and Poison Reverse in order to enable it to perform better in somewhat complicated networks.",
+    "TCP/UDP":"UDP",
+    "Fields" : {
+        "Command" : {
+            "Size" : "1",
+            "Offset" : "0"
+        },
+        "Verson" :{
+            "Size" : "1",
+            "Offset" : "1"
+        },
+        "Address family" : {
+            "Size" : "2",
+            "Offset" : "4"
+        },
+        "IPv4 address" : {
+            "Size" : "4",
+            "Offset" : "8"
+        },
+        "Metric" : {
+            "Size" : "4",
+            "Offset" : "24"
+        }
+    }
+}
