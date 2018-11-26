@@ -4,7 +4,7 @@
 #include <string>
 #include <iostream>
 
-#include "include/rapidjson/document.h"
+#include "rapidjson/document.h"
 
 using namespace std;
 

@@ -5,9 +5,9 @@
 #include <stdlib.h>
 
 #include "ProtocolDissector.hpp"
-#include "include/rapidjson/document.h"
-#include "include/rapidjson/stringbuffer.h"
-#include "include/rapidjson/writer.h"
+#include "rapidjson/document.h"
+#include "rapidjson/stringbuffer.h"
+#include "rapidjson/writer.h"
 
 using namespace std;
 
