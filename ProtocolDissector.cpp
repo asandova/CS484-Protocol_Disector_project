@@ -38,3 +38,10 @@ string ProtocolDissector::readFile(string filename ){
     }
     return buffer;
 }
+
+void ProtocolDissector::toLua(rapidjson::Document proto){
+    ofstream out;
+
+
+    //out.open("",ofstream::out);
+}

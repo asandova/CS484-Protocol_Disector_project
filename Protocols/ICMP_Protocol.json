@@ -1,0 +1,24 @@
+{
+    "ProtocolName" : "ICMP",
+    "Port":"any",
+    "Description": "Description of protocol goes here",
+    "TCP/UDP":"both",
+    "Fields" : {
+        "Type" : {
+            "Size" : "1",
+            "Offset" : "0"
+        },
+        "Code" : {    
+            "Size" : "1",
+            "Offset" : "1"
+        },
+        "ICMP Checksum" :{
+            "Size" : "2",
+            "Offset" : "2"
+        },
+        "DATA" : { 
+            "Size" : "any",
+            "Offset" : "4"
+        }
+    }
+}

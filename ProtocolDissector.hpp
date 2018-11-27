@@ -16,5 +16,6 @@ class ProtocolDissector{
         string readFile(string filename);
     public:
         ProtocolDissector(string jsonFile);
+        void toLua(rapidjson::Document proto);
 };
 #endif
