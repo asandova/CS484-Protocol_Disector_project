@@ -3,19 +3,27 @@
 
 #include <string>
 #include <iostream>
+#include <fstream>
 
 #include "rapidjson/document.h"
 
 using namespace std;
 
+typedef rapidjson::Document JSON;
+
 class ProtocolDissector{
 
     private:
-        rapidjson::Document ProtocolData;        
+        JSON ProtocolData;        
 
         string readFile(string filename);
+        string fields();
+        string dissector();
+        string dissectorTablePort();
     public:
         ProtocolDissector(string jsonFile);
-        void toLua(rapidjson::Document proto);
+        void toLua();
+        //JSON getJson()const;
 };
+
 #endif

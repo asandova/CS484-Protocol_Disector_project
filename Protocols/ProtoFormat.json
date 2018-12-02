@@ -3,22 +3,26 @@
     "Port":"#1234",
     "Description": "Description of protocol goes here",
     "TCP/UDP":"TCP",
-    "Fields" : {
-        "Field 1" : {
+    "Fields" : [
+        {
+            "FieldName" : "Field 1",
             "Size" : "#1234",
             "Offset" : "#1234"
         },
-        "Field 2" : {    
+        {   
+            "FieldName" : "Field 2",
             "Size" : "#1234",
             "Offset" : "#1234"
         },
-        "Field 3" :{
+        {
+            "FieldName" : "Field 3",
             "Size" : "#1234",
             "Offset" : "#1234"
         },
-        "Fields 4" : { 
+        { 
+            "FieldName" : "Field 4",
             "Size" : "#1234",
             "Offset" : "#1234"
         }
-    }
+    ]
 }

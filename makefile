@@ -8,3 +8,6 @@ main.o: main.cpp
 
 ProtocolDissector.o: ProtocolDissector.hpp ProtocolDissector.cpp
 	g++ -c ProtocolDissector.cpp
+
+clean:
+	rm -rf *.o
