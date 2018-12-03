@@ -5,24 +5,42 @@
     "TCP/UDP":"TCP",
     "Fields" : [
         {
-            "FieldName" : "Field 1",
+            "FieldName" : "Field_1",
+            "Big/LittleEndien" : "Big",
             "Size" : "#1234",
-            "Offset" : "#1234"
-        },
-        {   
-            "FieldName" : "Field 2",
-            "Size" : "#1234",
-            "Offset" : "#1234"
+            "Offset" : "#offset(bytes)",
+            "Bit/Byte" : "Byte",
+            "HasCodeDisc" : "True",
+            "Type" : "int32",
+            "Base" : "DEC"
         },
         {
-            "FieldName" : "Field 3",
+            "FieldName" : "Field_2",
+            "Big/LittleEndien" : "Little",
             "Size" : "#1234",
-            "Offset" : "#1234"
+            "Offset" : "#1234",
+            "Bit/Byte" : "Bit",
+            "BitRange" : ["#offset","#length"],
+            "HasCodeDisc" : "False",
+            "Type" : "int32",
+            "Base" : "DEC"
         },
-        { 
-            "FieldName" : "Field 4",
+        {
+            "FieldName" : "Field_3",
+            "Big/LittleEndien" : "Big",
             "Size" : "#1234",
-            "Offset" : "#1234"
+            "Offset" : "#offset(bytes)",
+            "Bit/Byte" : "Byte",
+            "HasCodeDisc" : "False",
+            "Type" : "string",
+            "Base" : "ASCII"
+        }
+    ],
+    "Field_1" : [
+        {
+            "Type": "#value",
+            "Description": "Description",
+            "Range" : ["Low(inclusive)","High(exclusive)"]
         }
     ]
 }

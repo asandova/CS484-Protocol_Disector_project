@@ -1,5 +1,5 @@
 {
-    "ProtocolName" : "RIP",
+    "ProtocolName" : "MyRIPv1",
     "Port":"520",
     "length" : "512",
     "Description": "This is a simple distance vector protocol. It has been enhanced with various techniques, including Split Horizon and Poison Reverse in order to enable it to perform better in somewhat complicated networks.",
@@ -11,7 +11,9 @@
             "Type" : "int32",
             "Size" : "1",
             "Offset" : "0",
-            "Base" : "DEC"
+            "Bit/Byte" : "Byte",
+            "Base" : "DEC",
+            "HasCodeDisc" : "True"
         },
         {
             "FieldName" : "Version",
@@ -19,7 +21,9 @@
             "Type" : "int32",
             "Size" : "1",
             "Offset" : "1",
-            "Base" : "DEC"
+            "Bit/Byte" : "Byte",
+            "Base" : "DEC",
+            "HasCodeDisc" : "False"
         },
         {
             "FieldName" : "Address_Family",
@@ -27,7 +31,9 @@
             "Type" : "string",
             "Size" : "2",
             "Offset" : "4",
-            "Base" : "NONE"
+            "Bit/Byte" : "Byte",
+            "Base" : "ASCII",
+            "HasCodeDisc" : "False"
         },
         {
             "FieldName" : "IPv4_Address",
@@ -35,15 +41,76 @@
             "Type" : "string",
             "Size" : "4",
             "Offset" : "8",
-            "Base" : "NONE"
+            "Bit/Byte" : "Byte",
+            "Base" : "ASCII",
+            "HasCodeDisc" : "False"
         },
         {
             "FieldName" : "Metric",
             "Big/LittleEndien" : "Big",
             "Type" : "int32",
             "Size" : "4",
-            "Offset" : "24",
-            "Base" : "DEC"
+            "Offset" : "16",
+            "Bit/Byte" : "Byte",
+            "Base" : "DEC",
+            "HasCodeDisc" : "False"
+        }
+    ],
+    "Command" : [
+        {
+            "Type": "1",
+            "Description": "Request",
+            "Range" : ["1","2"]
+        },
+        {
+            "Type": "2",
+            "Description": "Responce",
+            "Range" : ["2","3"]
+        },
+        {
+            "Type": "3",
+            "Description": "Trace on",
+            "Range" : ["3","4"]
+        },
+        {
+            "Type": "4",
+            "Description":"Trance off",
+            "Range" : ["4","5"]
+        },
+        {
+            "Type": "5",
+            "Description":"SUN Reserved",
+            "Range" : ["5","6"]
+        },
+        {
+            "Type": "6",
+            "Description":"Triggered Request",
+            "Range" : ["6","7"]
+        },
+        {
+            "Type": "7",
+            "Description":"Triggered Responce",
+            "Range" : ["7","8"]
+        },
+        {
+            "Type": "8",
+            "Description":"Triggered Acknowlegement",
+            "Range" : ["8","9"]
+        },
+        {
+            "Type": "9",
+            "Description":"Update Request",
+            "Range" : ["9","10"]
+        },
+        {
+            "Type": "10",
+            "Description":"Update Responce",
+            "Range" : ["10","11"]
+        },
+        {
+            "Type": "11",
+            "Description":"Update Ackowledge",
+            "Range" : ["11","12"]
         }
     ]
 }

@@ -1,48 +1,260 @@
 {
-    "ProtocolName" : "RTP",
+    "ProtocolName" : "MyRTP",
     "Port":"5004",
-    "Description": "RTP provides end-to-end network transport functions suitable for applications transmitting real-time data, such as audio, video or simulation data, over multicast or unicast network services. RTP does not address resource reservation and does not guarantee quality-of-service for real-time services.",
+    "Description": "RTP Protocol",
     "TCP/UDP":"UDP",
-    "Fields" : {
-        "Version" : {
-            "Size" : "#1234",
-            "Offest" : "#1234"
+    "Fields" : [
+        {
+            "FieldName" : "Version",
+            "Big/LittleEndien" : "Big",
+            "Type" : "int32",
+            "Size" : "1",
+            "Bit/Byte" : "Bit",
+            "BitRange" :["0","2"],
+            "Offset" : "0",
+            "Base" : "DEC",
+            "HasCodeDisc" : "False"
         },
-        "Padding" : {
-            "Size" : "#1234",
-            "Offest" : "#1234"
+        {  
+            "FieldName" : "Padding",
+            "Big/LittleEndien" : "Big",
+            "Type" : "int32",
+            "Size" : "1",
+            "Bit/Byte" : "Bit",
+            "BitRange": ["2","1"],
+            "Offset" : "0",
+            "Base" : "DEC",
+            "HasCodeDisc" : "False"
         },
-        "Extension" : {
-            "Size" : "#1234",
-            "Offest" : "#1234"
+        { 
+            "FieldName" : "Extension",
+            "Big/LittleEndien" : "Big",
+            "Type" : "int32",
+            "Size" : "1",
+            "Bit/Byte" : "Bit",
+            "BitRange" : ["3","1"],
+            "Offset" : "0",
+            "Base" : "DEC",
+            "HasCodeDisc" : "False"
         },
-        "CSRC Count" : {
-            "Size" : "#1234",
-            "Offest" : "#1234"
+        {
+            "FieldName" : "CSRC_Count",
+            "Big/LittleEndien" : "Big",
+            "Type" : "int32",
+            "Size" : "4",
+            "Bit/Byte" : "Bit",
+            "BitRange" : ["4","4"],
+            "Offset" : "0",
+            "Base" : "DEC",
+            "HasCodeDisc" : "False"
         },
-        "Maker" : {
-            "Size" : "#1234",
-            "Offest" : "#1234"
+        {   
+            "FieldName" : "Maker",
+            "Big/LittleEndien" : "Big",
+            "Type" : "int32",
+            "Size" : "1",
+            "Bit/Byte" : "Bit",
+            "BitRange" : ["0","1"],
+            "Offset" : "1",
+            "Base" : "DEC",
+            "HasCodeDisc" : "False"
         },
-        "Payload Type" : {
-            "Size" : "#1234",
-            "Offest" : "#1234"
+        { 
+            "FieldName": "Payload_Type",
+            "Big/LittleEndien" : "Big",
+            "Type" : "int32",
+            "Size" : "1",
+            "Bit/Byte" : "Bit",
+            "BitRange" : ["1","7"],
+            "Offset" : "1",
+            "Base" : "DEC",
+            "HasCodeDisc" : "True"
         },
-        "Sequence Number" : {
+        { 
+            "FieldName" : "Sequence_Number",
+            "Big/LittleEndien" : "Big",
+            "Type" : "int32",
             "Size" : "2",
-            "Offest" : ""
+            "Bit/Byte" : "Byte",
+            "Offset" : "2",
+            "Base" : "DEC",
+            "HasCodeDisc" : "False"
         },
-        "Time Stamp" : {
+        { 
+            "FieldName" : "Time_Stamp",
+            "Big/LittleEndien" : "Big",
+            "Type" : "int32",
             "Size" : "4",
-            "Offest" : "4"
+            "Bit/Byte" : "Byte",
+            "Offset" : "4",
+            "Base" : "DEC",
+            "HasCodeDisc" : "False"
         },
-        "Synchronization Source" : {
+        {  
+            "FieldName" : "Synchronization_Source",
+            "Big/LittleEndien" : "Big",
+            "Type" : "int32",
             "Size" : "4",
-            "Offest" : "8"
+            "Bit/Byte" : "Byte",
+            "Offset" : "8",
+            "Base" : "DEC",
+            "HasCodeDisc" : "False"
         },
-        "Contribution Source" : {
+        { "FieldName": "Contribution_Source",
+            "Big/LittleEndien" : "Big",
+            "Type" : "int32",
             "Size" : "4",
-            "Offest" : "16"
+            "Bit/Byte" : "Byte",
+            "Offset" : "16",
+            "Base" : "DEC",
+            "HasCodeDisc" : "False"
         }
-    }
+    ],
+    "Payload_Type" : [
+        {
+            "Type": "0",
+            "Description": "PCMU",
+            "Range" : ["0","1"]
+        },
+        {
+            "Type": "1",
+            "Description": "1016",
+            "Range" : ["1","2"]
+        },
+        {
+            "Type": "2",
+            "Description": "G721",
+            "Range" : ["2","3"]
+        },
+        {
+            "Type": "3",
+            "Description": "GSM",
+            "Range" : ["3","4"]
+        },
+        {
+            "Type": "4",
+            "Description": "G723",
+            "Range" : ["4","5"]
+        },
+        {
+            "Type": "5",
+            "Description": "DV14",
+            "Range" : ["5","6"]
+        },
+        {
+            "Type": "6",
+            "Description": "DV14",
+            "Range" : ["6","7"]
+        },
+        {
+            "Type": "7",
+            "Description": "LPC",
+            "Range" : ["7","8"]
+        },
+        {
+            "Type": "8",
+            "Description": "PCMA",
+            "Range" : ["8","9"]
+        },
+        {
+            "Type": "9",
+            "Description": "G722",
+            "Range" : ["9","10"]
+        },
+        {
+            "Type": "10",
+            "Description": "L16",
+            "Range" : ["10","11"]
+        },
+        {
+            "Type": "11",
+            "Description": "L16",
+            "Range" : ["11","12"]
+        },
+        {
+            "Type": "12",
+            "Description": "QCELP",
+            "Range" : ["12","13"]
+        },
+        {
+            "Type": "13",
+            "Description": "CN",
+            "Range" : ["13","14"]
+        },
+        {
+            "Type": "14",
+            "Description": "MPA",
+            "Range" : ["14","15"]
+        },
+        {
+            "Type": "15",
+            "Description": "G728",
+            "Range" : ["15","16"]
+        },
+        {
+            "Type": "16",
+            "Description": "DV14",
+            "Range" : ["16","17"]
+        },
+        {
+            "Type": "17",
+            "Description": "DV14",
+            "Range" : ["17","18"]
+        },
+        {
+            "Type": "18",
+            "Description": "G729",
+            "Range" : ["18","19"]
+        },
+        {
+            "Type": "19",
+            "Description": "Reserved",
+            "Range" : ["19","20"]
+        },
+        {
+            "Type": "25",
+            "Description": "CellB",
+            "Range" : ["25","26"]
+        },
+        {
+            "Type": "26",
+            "Description": "JPEG",
+            "Range" : ["26","27"]
+        },
+        {
+            "Type": "28",
+            "Description": "nv",
+            "Range" : ["28","29"]
+        },
+        {
+            "Type": "31",
+            "Description": "H261",
+            "Range" : ["31","32"]
+        },
+        {
+            "Type": "32",
+            "Description": "MPV",
+            "Range" : ["32","33"]
+        },
+        {
+            "Type": "33",
+            "Description": "MP2T",
+            "Range" : ["33","34"]
+        },
+        {
+            "Type": "34",
+            "Description": "H263",
+            "Range" : ["34","35"]
+        },
+        {
+            "Type": "72",
+            "Description": "Reserved",
+            "Range" : ["72","77"]
+        },
+        {
+            "Type": "96",
+            "Description": "Dynamic",
+            "Range" : ["96","128"]
+        }
+    ]
 }
