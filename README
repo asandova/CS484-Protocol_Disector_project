@@ -1,0 +1,16 @@
+Protocol Disector
+Converts JSON representation of IP Protocols into a WireShark Lua plugin
+
+Compile:
+  Linux: 
+    using Makefile
+      command: make
+    or
+    g++ ProtocolDissector.cpp main.cpp -o Disector
+ 
+ run:
+  Linux:
+    ./Disector -JSONFILE <path to IP JSON File>
+    output:
+      lua file with same name as input file with extention .lua
+    
